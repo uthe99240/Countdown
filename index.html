@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Hello, world!</title>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); </style>
+    
+</head>
+  <body>
+
+    <div class="mx-lg-5 mx-md-3 mt-3">
+        <div class="d-flex justify-content-between mb-lg-5">
+            <img src="images/Government_Seal_of_Bangladesh.svg.png" class="img-fluid govt" alt="">
+            <img src="images/seip.png" class="img-fluid seip" alt="">
+            <img src="images/Asian_Development_Bank_logo.svg.png" class="img-fluid adb" alt="">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div>
+                <div class="mt-5 pt-lg-3 text-center">
+                    <h3>Skills for Employment investment Program</h3>
+                    <h3>Finance Division, Ministry of Finance</h3>
+                </div>
+                <div class="text-center mb-5">
+                    <h3>Project Closing Date : 31 December 2023</h3>
+                    <h3>We are left with only</h3>
+                </div>
+                <div class="d-flex justify-content-center countdown">
+                    <div class="mr-lg-4">
+                        <p id="days" class="text-white"></p>
+                        <h5 class="text-center text-white">DAYS</h5>
+                    </div>
+                    <div class="mx-lg-4 mr-2">
+                        <p id="hours" class="text-white"></p>
+                        <h5 class="text-center text-white">HOURS</h5>
+                    </div>
+                    <div class="mx-lg-4 mr-2">
+                        <p id="mins" class="text-white"></p>
+                        <h5 class="text-center text-white">MINUTES</h5>
+                    </div>
+                    <div class="ml-lg-4">
+                        <p id="secs" class="text-danger"></p>
+                        <h5 class="text-center text-white">SECONDS</h5>
+                    </div>
+                </div>
+            </div>
+         </div>
+            
+        
+        
+        
+    </div>
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+        
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+        
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+    // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("mins").innerHTML = minutes;
+    document.getElementById("secs").innerHTML = seconds;
+    // document.getElementById("demo").innerHTML = days + "DAYS " + hours + "HOURS "
+    // + minutes + "MINUTES " + seconds + "SECONDS";
+    // document.getElementById("demo").innerHTML = days + "DAYS " + hours + "HOURS "
+    // + minutes + "MINUTES " + seconds + "SECONDS";
+    // document.getElementById("demo").innerHTML = days + "DAYS " + hours + "HOURS "
+    // + minutes + "MINUTES " + seconds + "SECONDS";
+        
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+    </script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.govt{
+    height: 80px;
+    width: 80px;
+}
+.seip{
+    height: 80px;
+    width: 300px;
+}
+.adb{
+    height: 80px;
+    width: 80px;
+}
+
+p{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+.countdown{
+    background-color: rgb(43, 43, 140);
+    border: 10px solid blue;
+}
