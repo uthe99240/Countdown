@@ -1,6 +1,6 @@
 body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    /* background-repeat: no-repeat; */
     background-size: cover;
   }
 .govt{
@@ -25,4 +25,16 @@ p{
 .countdown{
     background-color: rgb(43, 43, 140);
     border: 10px solid blue;
+}
+
+@media screen and (max-width : 767px){
+    .position{
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width : 992px)  and (min-width: 768px){
+    .position{
+        padding-top: 150px;
+    }
 }
