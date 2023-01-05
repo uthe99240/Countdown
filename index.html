@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>SEIP</title>
     <style> @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); </style>
-    
+    <link rel="icon" href="images/Government_Seal_of_Bangladesh.svg.png" type="image/icon type">
+
 </head>
   <body>
 
@@ -21,9 +22,9 @@
             <img src="images/seip.png" class="img-fluid seip" alt="">
             <img src="images/Asian_Development_Bank_logo.svg.png" class="img-fluid adb" alt="">
         </div>
-        <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center position">
             <div>
-                <div class="mt-5 pt-lg-3 text-center">
+                <div class="mt-5 mb-5 pt-lg-3 text-center">
                     <h3>Skills for Employment investment Program</h3>
                     <h3>Finance Division, Ministry of Finance</h3>
                 </div>
@@ -31,16 +32,16 @@
                     <h3>Project Closing Date : 31 December 2023</h3>
                     <h3>We are left with only</h3>
                 </div>
-                <div class="d-flex justify-content-center countdown">
-                    <div class="mr-lg-4">
+                <div class="d-flex justify-content-center countdown mb-2">
+                    <div class="mr-lg-4 mr-sm-2">
                         <p id="days" class="text-white"></p>
                         <h5 class="text-center text-white">DAYS</h5>
                     </div>
-                    <div class="mx-lg-4 mr-2">
+                    <div class="mx-lg-4 mr-sm-2">
                         <p id="hours" class="text-white"></p>
                         <h5 class="text-center text-white">HOURS</h5>
                     </div>
-                    <div class="mx-lg-4 mr-2">
+                    <div class="mx-lg-4 mr-sm-2">
                         <p id="mins" class="text-white"></p>
                         <h5 class="text-center text-white">MINUTES</h5>
                     </div>
@@ -58,7 +59,7 @@
     </div>
     <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    var countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -75,11 +76,32 @@
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-    // Output the result in an element with id="demo"
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("mins").innerHTML = minutes;
-    document.getElementById("secs").innerHTML = seconds;
+    if(days<10){
+        document.getElementById("days").innerHTML = "0"+ days;
+    }else{
+        document.getElementById("days").innerHTML = days;
+    }
+
+    if(hours<10){
+        document.getElementById("hours").innerHTML = "0"+ hours;
+    }else{
+        document.getElementById("hours").innerHTML = hours;
+    }
+    
+    if(minutes<10){
+        document.getElementById("mins").innerHTML = "0"+ minutes;
+    }else{
+        document.getElementById("mins").innerHTML = minutes;
+    }
+    if(seconds<10){
+        document.getElementById("secs").innerHTML = "0"+ seconds;
+    }else{
+        document.getElementById("secs").innerHTML = seconds;
+    }
+   
+    // document.getElementById("hours").innerHTML = hours;
+    // document.getElementById("mins").innerHTML = minutes;
+    // document.getElementById("secs").innerHTML = seconds;
     // document.getElementById("demo").innerHTML = days + "DAYS " + hours + "HOURS "
     // + minutes + "MINUTES " + seconds + "SECONDS";
     // document.getElementById("demo").innerHTML = days + "DAYS " + hours + "HOURS "
